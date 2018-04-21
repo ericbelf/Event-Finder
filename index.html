@@ -1,31 +1,70 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>-->
 <html lang="en">
-<head>
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-	<script src="main.js"></script>
-	<title>Event Finder Near You</title>
-</head>
-<body>
-	<head role="header">
-	<h1>Select Your Location!</h1>
-	</head>
-	<section role="form">
-		<form action="#" id="searchLocation">
-			<fieldset>
-			City:<br>
-			<input type=text name="city" value="City">
-			State:<br>
-			<input type=text name="state" value="State">
-			Or Zip Code<br>
-			<input type=text name="zipcode" value="Zip Code">
-			<input type=button value="Submit">
-			</fieldset>
-		</form>
-	</section>
 
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAf-iTfZFRJ9fDTGecmCDW7074ds9N-vUk&libraries=places"></script>
+    <!--for formatting dates displayed  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.js"></script>
+    
+    
+   <!-- <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&language=en"></script>-->
+    <title>Event Finder Near You</title>
+  </head>
+
+  <body>
+    <header role="header">
+      
+    </header>
+    <section id="intro" class="intro">
+      <p id="introDisplay">SEE WHAT ADVENTURES AWAIT YOU!</p>
+      <input type="submit" id="button1" class="getStarted" value="Let's get started"> 
+    </section>
+
+    <section id="form" class="form">
+        <h1>Find Local Events Near You.</h1>
+      <form class="js-search-form" action="#" id="js-search-form">
+        <fieldset id="fieldset">
+        <!--Enter location and event here-->
+          <input type=text name="location" id="eventLocation" class="eventLocation" required>
+          <input type=text name="event" placeholder="Event to find?" id="eventName" class="eventName" required>
+        <!--Select distance radius for event-->
+           <select name="Distance" class="eventDistance" required>
+            <option value="" selected disabled hidden>Search Radius</option>
+            <option value="5mi">5 miles</option>
+            <option value="10mi">10 miles</option>
+            <option value="15mi">15 miles</option>
+            <option value="20mi">20 miles</option>
+            <option value="25mi">25 miles</option>
+            <option value="30mi">30 miles</option>
+          </select>
+        <!--Select event date-->  
+          <select name="Event Date" class="eventDate" required>
+            <option value="" selected disabled hidden>When?</option>
+            <option value="today">Today</option>
+            <option value="tomorrow">Tomorrow</option>
+            <option value="this_weekend">This Weekend</option>
+            <option value="this_week">This Week</option>
+            <option value="next_week">Next Week</option>
+            <option value="this_month">This Month</option>
+            <option value="next_month">Next Month</option>
+          </select>
+        <!--Submit form-->
+          <input type="submit" id="button" value="Submit">
+        </fieldset>
+      </form>
+    </section>
+    <main role="main" class="js-search-results" aria-live="assertive">
+       
+      </main>
+    <script src="main.js"></script>
+  </body>
+
 </html>
+  
+
+ 
