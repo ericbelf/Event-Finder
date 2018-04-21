@@ -6,5 +6,6 @@ direct link: https://ericbelf.github.io/Event-Finder/
 
 Technology used: HTML/CSS/JavaScript/jQuery
 
-
-![Alt text](Event-Finder/screen shot.PNG)
+Screen Shots:
+![Alt_text](https://github.com/ericbelf/Event-Finder/blob/master/splash%20screen.PNG?raw=true)
+![Alt_text](https://github.com/ericbelf/Event-Finder/blob/master/screen%20shot.PNG?raw=true)
