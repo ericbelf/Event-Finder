@@ -17,23 +17,20 @@
   </head>
 
   <body>
-    <header role="header">
-      
-    </header>
-    <section id="intro" class="intro">
+    <header id="intro" class="intro" role="banner">
       <p id="introDisplay">SEE WHAT ADVENTURES AWAIT YOU!</p>
       <input type="submit" id="button1" class="getStarted" value="Let's get started"> 
-    </section>
+    </header>
 
     <section id="form" class="form">
         <h1>Find Local Events Near You.</h1>
       <form class="js-search-form" action="#" id="js-search-form">
         <fieldset id="fieldset">
         <!--Enter location and event here-->
-          <input type=text name="location" id="eventLocation" class="eventLocation" required>
-          <input type=text name="event" placeholder="Event to find?" id="eventName" class="eventName" required>
+          <input type=text name="location" id="eventLocation" class="eventLocation" aria-label="location" required>
+          <input type=text name="event" placeholder="Event to find?" id="eventName" class="eventName" aria-label="event" required>
         <!--Select distance radius for event-->
-           <select name="Distance" class="eventDistance" required>
+           <select name="Distance" class="eventDistance" aira-label="distance-radius" required>
             <option value="" selected disabled hidden>Search Radius</option>
             <option value="5mi">5 miles</option>
             <option value="10mi">10 miles</option>
@@ -43,7 +40,7 @@
             <option value="30mi">30 miles</option>
           </select>
         <!--Select event date-->  
-          <select name="Event Date" class="eventDate" required>
+          <select name="Event Date" class="eventDate" aria-label="event-date" required>
             <option value="" selected disabled hidden>When?</option>
             <option value="today">Today</option>
             <option value="tomorrow">Tomorrow</option>
